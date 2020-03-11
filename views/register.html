@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="signin_signup/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="signin_signup/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">LYF Hotels</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/rooms2" class="nav-link">Rooms</a></li>
+            <li class="nav-item"><a href="/services2" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="/blog2" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="/contact2" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="/about2" class="nav-link">About Us</a></li>
+            <!-- <li class="nav-item active"><a href="/login" class="nav-link">My Account</a></li> -->
+          </ul>
+    </div>
+    </nav>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Register</h2>
+                        <form method="POST" action="/register" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name"  placeholder="Name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" placeholder="Email" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="username" placeholder="Username" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="number"><i class="zmdi zmdi-phone"></i></label>
+                                <input type="text" name="number" placeholder="Number" required/>
+                             </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" placeholder="Password" required/>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="confirm_password" id="confirm_password" placeholder="Repeat your password" required/><span id='message'></span>
+                            </div> -->
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required/>
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service"><span style="color: darkblue;background-color: #cccccc;border-radius:5%;font-size:15px"> Terms of service.</span></a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <button type="submit" class="btn btn-primary py-3 px-5">Register</button>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Or sign up with</span>
+                            <ul class="socials">
+                                <li><a href="https://www.facebook.com"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="https://www.twitter.com"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="https://www.google.com"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="/login" class="signup-image-link">Already a member?</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JS -->
+    <!-- <script>
+    $('#password, #confirm_password').on('keyup', function () {
+        if ($('#password').val() == $('#confirm_password').val()) {
+            $('#message').html('Matching').css('color', 'green');
+        } else 
+            $('#message').html('Not Matching').css('color', 'red');
+    });
+    </script> -->
+    <script src="signin_signup/vendor/jquery/jquery.min.js"></script>
+    <script src="signin_signup/js/main.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
